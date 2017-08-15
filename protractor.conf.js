@@ -2,6 +2,7 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter } = require('jasmine-spec-reporter');
+require('geckodriver');
 
 exports.config = {
   allScriptsTimeout: 11000,
@@ -19,7 +20,10 @@ exports.config = {
   // after following:
   // npm install geckodriver --save-dev
   // set geckDriver like below:
-  geckoDriver: "/home/guney/Desktop/tdd/tdd-chp8/node_modules/geckodriver/bin/geckodriver",
+  geckoDriver: "bin/geckodriver",
+//  learned from: https://www.npmjs.com/package/geckodriver
+// DONOT FORGET ABOVE TOP TO require('geckodriver'); 
+
 
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
